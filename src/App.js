@@ -18,6 +18,7 @@ export default function App() {
 
     const graphStatus = helpers.getGraphStatus({ ...adjacencyList }, source);
 
+    // Handle display graph Infos on screen
     const newGraphInfos = {
       graphPath: graphPathText,
       graphStatus: graphStatus,
@@ -26,7 +27,6 @@ export default function App() {
     setGraphInfos([{ ...newGraphInfos }, ...graphInfos]);
 
     setGraphPathText('');
-    console.log(graphInfos);
   };
 
   return (

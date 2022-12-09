@@ -1,10 +1,8 @@
-/* removes whitespaces and splits based on delimiters comma or newLine */
 const formatUserInput = (graphPathText) => {
   const removedSpacesPath = graphPathText.replace(/ /g, '');
   return removedSpacesPath.split(/[,\n]+/);
 };
 
-/* returns Graph representation Data Structure */
 const createAdjacencyList = (pathsArray) => {
   const adjacencyList = {};
 
@@ -37,7 +35,6 @@ const createAdjacencyList = (pathsArray) => {
   return adjacencyList;
 };
 
-/* returns message whether graph is Connected and Colorable or NOT */
 const getGraphStatus = (graph, source) => {
   const color = {};
   color[source] = 0; // red color
@@ -70,13 +67,8 @@ const depthFirstSearch = (graph, source, color) => {
   return true;
 };
 
-const getTraversalOutput = (text) => {
-  return text;
-};
-
 export default {
   formatUserInput,
   createAdjacencyList,
   getGraphStatus,
-  getTraversalOutput,
 };
